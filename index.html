@@ -327,13 +327,27 @@
       <h2 class="title">Installation</h2>
       <pre><code>
         #REQUIREMENTS: ubuntu >= 20.04, git, conda, gitlfs, isaac sim and curobo requirements (gpu with 8 gm vram (4060 or higher), 32 gb ram, etc... We developed with 4060 for the most of the time even its below min specs)
+        (It's recommended to install the packages will now described inside a conda environment. We also installed isaac sim in that conda env. Supported Isaac sim versions are 4.5 and 5.0. 
+        Before running conda  create please checkout https://docs.isaacsim.omniverse.nvidia.com/5.0.0/installation/install_python.html and https://docs.isaacsim.omniverse.nvidia.com/4.5.0/installation/install_python.html to see the differences (different ldd requirements for example) and depending on your machine, select either 4.5 or 5.0 (mostly depends on ldd version). 
+        Then take isaac sim conda installation instructions (isaac sim 4.5 with python 3.10 and ldd 2.34+ or 5.0 with python 3.11 and ldd 2.35+ depending on your machine and follow the instructiosn below.
+        
         pick a name for your environment (%env%)
         
-        - create a new env using: 'conda create env -b %env%'  (and then 'conda activate %env%') # make sure python >= 3.10
+        - create a new env using: 'conda create env -b %env%'  (and then 'conda activate %env%') # make sure python is  3.10 or 3.11 depending on the mentioned above!
         - then install isaac sim using “pip” installation instructions the isaac sim env inside the conda env https://docs.isaacsim.omniverse.nvidia.com/latest/installation/install_python.html
          (pip is the way worked best to me and the rest of process follows, but any other isaac sim installation should work,
           look for the instructions start with: conda create -n env_isaacsim python=3.11 # use %env%  conda activate env_isaacsim # use %env% and keep from there with their tutoial)
+        
+        - If installing isaac sim 4.5 (python 3.10), run: 
+          conda activate %env%
+          pip install isaacsim[all]==4.5.0 --extra-index-url https://pypi.nvidia.com
+          
+        - If installing isaac sim 5.0 (python 3.11), run:   
+          conda activate %env%
+          pip install isaacsim[all,extscache]==5.0.0 --extra-index-url https://pypi.nvidia.com
+        
 
+        
         - clone our repo: Git clone https://github.com/Dan7171/rl_for_curobo.git
         - cd rl_for_curobo/curobo # currently rl_for_curobo is a legacy name for our mpc-multi arm project (sorry for the inconvenience, this will be changed soon to "mpc-multi-arm" or similar in following versions)
         - install curobo in your conda env: 
