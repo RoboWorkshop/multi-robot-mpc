@@ -188,8 +188,17 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-centered">
           <p>
-          Recent advances in sampling-based motion planning algorithms for high DOF arms leverage GPUs to provide SOTA performance. While these algorithms can be used to control multiple arms jointly, this approach scales poorly. To address this, we extend the STORM motion planning algorithm that uses sampling-based model-predictive-control (MPC) to handle multiple roboots. Our algorithm distributes the computation among the arms, with each computing its own path, while sharing this information with the other arms. We demonstrate the empirical advantages of this approach over SOTA algorithms when operating with both static and dynamic obstacles.
-          </p>
+Abstract— Recent advances in sampling-based motion planning algorithms for high DOF arms leverage GPUs to provide
+SOTA performance. These algorithms can be used to control
+multiple arms jointly, but this approach scales poorly. To
+address this, we extend STORM, a sampling-based modelpredictive-control (MPC) motion planning algorithm, to handle
+multiple robots in a distributed fashion. First, we modify
+STORM to handle dynamic obstacles. Then, we let each arm
+compute its own motion plan prefix, which it shares with the
+other arms, which treat it as a dynamic obstacle. Finally, we add
+a dynamic priority scheme. The new algorithm, MR-STORM,
+demonstrates clear empirical advantages over SOTA algorithms
+when operating with both static and dynamic obstacles.          </p>
         </div>
       </div>
     </div>
