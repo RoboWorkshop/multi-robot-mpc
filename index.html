@@ -272,41 +272,68 @@ when operating with both static and dynamic obstacles.          </p>
 
 
 
-
 <!-- Video carousel -->
+<style>
+  .carousel .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto !important;
+    padding-bottom: 2rem;
+  }
+
+  .video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .video-container video {
+    max-width: 100%;
+    max-height: 600px;
+    height: auto;
+  }
+
+  .video-container .caption {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #4a4a4a;
+    text-align: center;
+  }
+</style>
+
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">MR-STORM Demos</h2>
+      <h2 class="title is-3 has-text-left">MR-STORM Demos</h2>
       <div id="results-carousel" class="carousel results-carousel">
-
-        <!-- Video 1 -->
-        <div class="item item-video1 has-text-centered">
+        
+        <div class="item item-video1">
           <div class="video-container">
-            <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <video id="video1" autoplay controls muted loop>
               <source src="static/videos/Bin_Level5_Seed0_O.mp4" type="video/mp4">
             </video>
-            <p class="caption">Bin Picking - Seed 0</p>
+            <div class="caption">Bin Picking - Level 5, Seed 0</div>
           </div>
         </div>
 
-        <!-- Video 2 -->
-        <div class="item item-video2 has-text-centered">
+        <div class="item item-video2">
           <div class="video-container">
-            <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <video id="video2" autoplay controls muted loop>
               <source src="static/videos/Reach_Seed1_Level6_O.mp4" type="video/mp4">
             </video>
-            <p class="caption">Reach Task - Level 6 - Seed 1</p>
+            <div class="caption">Reaching Task - Level 6, Seed 1</div>
           </div>
         </div>
 
-        <!-- Video 3 -->
-        <div class="item item-video3 has-text-centered">
+        <div class="item item-video3">
           <div class="video-container">
-            <video poster="" id="video3" autoplay controls muted loop height="100%">
+            <video id="video3" autoplay controls muted loop>
               <source src="static/videos/Bin_Level5_Seed2_O.mp4" type="video/mp4">
             </video>
-            <p class="caption">Bin Picking - Seed 2</p>
+            <div class="caption">Bin Picking - Level 5, Seed 2</div>
           </div>
         </div>
 
@@ -314,6 +341,9 @@ when operating with both static and dynamic obstacles.          </p>
     </div>
   </div>
 </section>
+<!-- End video carousel -->
+
+
 
 <!-- Video carousel -->
 <!-- <section class="hero is-small">
