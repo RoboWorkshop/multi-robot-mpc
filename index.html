@@ -349,7 +349,7 @@ when operating with both static and dynamic obstacles.          </p>
     <div class="container is-max-desktop content">
       <h2 class="title">Installation</h2>
       <pre><code>
-        #REQUIREMENTS: ubuntu >= 20.04, git, conda, gitlfs, isaac sim and curobo requirements (gpu with 8 gm vram (4060 or higher), 32 gb ram, etc... We developed with 4060 for the most of the time even its below min specs)
+        #REQUIREMENTS: ubuntu >= 20.04, git and gitlfs (see curobo docs to see why they are needed but don't install them from there but from the repo readme instructions (in code repo or from this readme here)), nvidia nvcc, anaconda, isaac sim and curobo requirements (gpu with 8 gm vram (4060 or higher), 32 gb ram, etc... We developed with 4060 for the most of the time even its below min specs)
         (It's recommended to install the packages will now described inside a conda environment. We also installed isaac sim in that conda env. Supported Isaac sim versions are 4.5 and 5.0. 
         Before running conda  create please checkout https://docs.isaacsim.omniverse.nvidia.com/5.0.0/installation/install_python.html and https://docs.isaacsim.omniverse.nvidia.com/4.5.0/installation/install_python.html to see the differences (different ldd requirements for example) and depending on your machine, select either 4.5 or 5.0 (mostly depends on ldd version). 
         Then take isaac sim conda installation instructions (isaac sim 4.5 with python 3.10 and ldd 2.34+ or 5.0 with python 3.11 and ldd 2.35+ depending on your machine and follow the instructiosn below.
