@@ -131,17 +131,15 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-centered">
           <p>
-Recent advances in sampling-based motion planning algorithms for high DOF arms leverage GPUs to provide
-SOTA performance. These algorithms can be used to control
-multiple arms jointly, but this approach scales poorly. To
-address this, we extend STORM, a sampling-based modelpredictive-control (MPC) motion planning algorithm, to handle
-multiple robots in a distributed fashion. First, we modify
-STORM to handle dynamic obstacles. Then, we let each arm
-compute its own motion plan prefix, which it shares with the
-other arms, which treat it as a dynamic obstacle. Finally, we add
-a dynamic priority scheme. The new algorithm, MR-STORM,
-demonstrates clear empirical advantages over SOTA algorithms
-when operating with both static and dynamic obstacles.          </p>
+Centralized motion planning for high-DOF ma-
+nipulators often fails to scale. We introduce MR-STORM,
+a distributed sampling-based MPC framework that leverages
+massively parallel GPU sampling for arm control. Our ap-
+proach integrates inter-arm collision avoidance via plan-sharing
+and a dynamic priority scheme to maintain task efficiency.
+Empirical results show that MR-STORM outperforms existing
+baselines in complex environments and transfers effectively to
+physical hardware.          </p>
         </div>
       </div>
     </div>
@@ -172,7 +170,37 @@ when operating with both static and dynamic obstacles.          </p>
             <source src="static/videos/g1_video2_part2.mp4"
             type="video/mp4">
           </video>
-        </div>    
+        </div>
+        <div class="item item-video4">
+          <video poster="" id="video4" autoplay controls muted loop height="100%">\
+            <source src="static/videos/video_1_part3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <source src="static/videos/g1_video2_part2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="video5" autoplay controls muted loop height="100%">\
+            <source src="static/videos/video_1_part4.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video6">
+          <video poster="" id="video6" autoplay controls muted loop height="100%">\
+            <source src="static/videos/video_2_part4.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-vid6o3">
+          <video poster="" id="video6" autoplay controls muted loop height="100%">\
+            <source src="static/videos/vodep_1_part5.mp4"
+            type="video/mp4">
+          </video>
+        </div>
       </div>
     </div>
   </div>
