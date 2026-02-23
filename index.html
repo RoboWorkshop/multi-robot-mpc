@@ -250,11 +250,13 @@ proach integrates inter-arm collision avoidance via plan-sharing and a dynamic p
   
 <section class="section">
   <div class="container">
-    <h2 class="title is-3 has-text-centered"> Ours & Baselines</h2>
-    <div class="columns">
+    <h2 class="title is-3 has-text-centered">MR-STORM vs Alternatives</h2>
+
+    <!-- Enable wrapping and make each column half width -->
+    <div class="columns is-multiline">
 
       <!-- Video 1 -->
-      <div class="column">
+      <div class="column is-half">
         <video autoplay muted loop playsinline controls style="width:100%; height:auto;">
           <source src="static/videos/Bin_Level5_Seed1_SD.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -263,7 +265,7 @@ proach integrates inter-arm collision avoidance via plan-sharing and a dynamic p
       </div>
 
       <!-- Video 2 -->
-      <div class="column">
+      <div class="column is-half">
         <video autoplay muted loop playsinline controls style="width:100%; height:auto;">
           <source src="static/videos/Bin_Level5_Seed1_CC.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -272,21 +274,22 @@ proach integrates inter-arm collision avoidance via plan-sharing and a dynamic p
       </div>
 
       <!-- Video 3 -->
-      <div class="column">
+      <div class="column is-half">
         <video autoplay muted loop playsinline controls style="width:100%; height:auto;">
           <source src="static/videos/Bin_Level5_Seed1_O-.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
-        <p class="has-text-centered">MR STORM - (tau=0)</p>
+        <p class="has-text-centered">MR STORM no prioritization (tau=0)</p>
       </div>
 
       <!-- Your Algorithm (highlighted) -->
-      <div class="column has-background-light">
-        <video autoplay muted loop playsinline controls style="width:100%; height:auto; border: 3px solid #3273dc; border-radius: 8px;">
-          <source src="static/videos/Bin_Level5_Seed2_O.mp4" type="video/mp4"> <!-- Bin_Level5_Seed0_O.mp4 -->
+      <div class="column is-half has-background-light">
+        <video autoplay muted loop playsinline controls
+          style="width:100%; height:auto; border: 3px solid #3273dc; border-radius: 8px;">
+          <source src="static/videos/Bin_Level5_Seed2_O.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
-        <p class="has-text-centered has-text-weight-bold">⭐ MR STORM </p>
+        <p class="has-text-centered has-text-weight-bold">⭐ MR STORM</p>
       </div>
 
     </div>
