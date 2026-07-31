@@ -54,20 +54,30 @@
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">MR-STORM: Scalable Multi-Arm Control By Distributed MPC</h1>
             <div class="is-size-5 publication-authors">
-              <!-- <span class="author-block"> -->
-                <!-- <a href="evrond@post.bgu.ac.il" target="_blank">Dan Evron</a><sup></sup>,</span> -->
-                <!-- <span class="author-block"> -->
-                  <!-- <a href="eliasgol@post.bgu.ac.il" target="_blank">Elias Goldsztejn</a><sup></sup>,</span> -->
-                  <!-- <span class="author-block"> -->
-                    <!-- <a href="brafman@bgu.ac.il" target="_blank">Ronen I. Brafman</a><sup></sup>,</span> -->
-                  <!-- </span> -->
-                  </div>
+              <span class="author-block">
+                <a href="mailto:evrond@post.bgu.ac.il" target="_blank">Dan Evron</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="mailto:eliasgol@post.bgu.ac.il" target="_blank">Elias Goldsztejn</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="mailto:danrouve@post.bgu.ac.il" target="_blank">Dan R. Suissa</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="mailto:brafman@bgu.ac.il" target="_blank">Ronen I. Brafman</a><sup>1</sup>
+              </span>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- <span class="author-block">Institute: Institute name <br>Conferance(Year): TBD(YYYY): </span> -->
-                    <!-- <span class="author-block">The Department of Computer Science at Ben-Gurion University of the Negev <br></span> -->
-                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> --> 
-                  </div>
+              <div class="eql-cntrb"><small><br><sup>1</sup>Foundations of AI Institute, Stein Faculty of Computer and Information Science, Ben-Gurion University of the Negev.</small></div>
+
+              <div class="eql-cntrb"><small><br>This research was supported by Ben-Gurion University of the Negev through the Agricultural, Biological and Cognitive Robotics Initiative, the Marcus Endowment Fund and the Helmsley Charitable Trust.</small></div>
+
+              <div class="eql-cntrb"><small><br>Emails: {evrond,eliasgol,danrouve}@post.bgu.ac.il, brafman@bgu.ac.il</small></div>
+
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">To appear in: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
+            </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
@@ -247,8 +257,8 @@
           <div class="publication-video">
             <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
              <!-- <iframe src="https://youtu.be/embed/9mo3UCUW2Qk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-          <!-- <iframe width="560" height="315" src="https://youtu.be/txZJe9PxYc4?si=1NDo2Uw10_GukLAe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/txZJe9PxYc4?si=1NDo2Uw10_GukLAe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <!-- <iframe width="560" height="315" src="https://youtu.be/txZJe9PxYc4?si=1NDo2Uw10_GukLAe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write[...]
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/txZJe9PxYc4?si=1NDo2Uw10_GukLAe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboa[...] 
           </div>
         </div>
       </div>
@@ -320,6 +330,7 @@
   </div>
 </section>
   
+
 
 
 
@@ -411,6 +422,7 @@
 
 
 
+
 <!-- Paper poster -->
 <!-- <section class="hero is-small is-light">
   <div class="hero-body">
@@ -450,16 +462,16 @@
     <div class="container is-max-desktop content">
       <h2 class="title">Installation</h2>
       <pre><code>
-        #REQUIREMENTS: ubuntu >= 20.04, git and gitlfs (see curobo docs to see why they are needed but don't install them from there but from the repo readme instructions (in code repo or from this readme here)), nvidia nvcc, anaconda, isaac sim and curobo requirements (gpu with 8 gm vram (4060 or higher), 32 gb ram, etc... We developed with 4060 for the most of the time even its below min specs)
+        #REQUIREMENTS: ubuntu >= 20.04, git and gitlfs (see curobo docs to see why they are needed but don't install them from there but from the repo readme instructions (in code repo or from th[...]
         (It's recommended to install the packages will now described inside a conda environment. We also installed isaac sim in that conda env. Supported Isaac sim versions are 4.5 and 5.0. 
-        Before running conda  create please checkout https://docs.isaacsim.omniverse.nvidia.com/5.0.0/installation/install_python.html and https://docs.isaacsim.omniverse.nvidia.com/4.5.0/installation/install_python.html to see the differences (different ldd requirements for example) and depending on your machine, select either 4.5 or 5.0 (mostly depends on ldd version). 
-        Then take isaac sim conda installation instructions (isaac sim 4.5 with python 3.10 and ldd 2.34+ or 5.0 with python 3.11 and ldd 2.35+ depending on your machine and follow the instructiosn below.
-        Note that you can install isaac sim differently if you want for some reason (docker, from source etc) but make sure you install all packages similarly to the instructions will now describe in conda, not in conda but in isaac sim python env (read in isaac sim docs on python.sh script (the python interpreted of the other standalone versions we dont demonstrate their installation here) 
+        Before running conda  create please checkout https://docs.isaacsim.omniverse.nvidia.com/5.0.0/installation/install_python.html and https://docs.isaacsim.omniverse.nvidia.com/4.5.0/install[...]
+        Then take isaac sim conda installation instructions (isaac sim 4.5 with python 3.10 and ldd 2.34+ or 5.0 with python 3.11 and ldd 2.35+ depending on your machine and follow the instructio[...]
+        Note that you can install isaac sim differently if you want for some reason (docker, from source etc) but make sure you install all packages similarly to the instructions will now describ[...]
         
         pick a name for your environment (%env%)
         
         - create a new env using: 'conda create env -b %env%'  (and then 'conda activate %env%') # make sure python is  3.10 or 3.11 depending on the mentioned above!
-        - then install isaac sim using “pip” installation instructions the isaac sim env inside the conda env https://docs.isaacsim.omniverse.nvidia.com/latest/installation/install_python.html
+        - then install isaac sim using “pip” installation instructions the isaac sim env inside the conda env https://docs.isaacsim.omniverse.nvidia.com/latest/installation/install_python.htm[...]
          (pip is the way worked best to me and the rest of process follows, but any other isaac sim installation should work,
           look for the instructions start with: conda create -n env_isaacsim python=3.11 # use %env%  conda activate env_isaacsim # use %env% and keep from there with their tutoial)
         
@@ -476,7 +488,7 @@
 
         
         - clone our repo: Git clone https://github.com/RoboWorkshop/rl_for_curobo.git
-        - cd rl_for_curobo/curobo # currently rl_for_curobo is a legacy name for our mpc-multi arm project (sorry for the inconvenience, this will be changed soon to "mpc-multi-arm" or similar in following versions)
+        - cd rl_for_curobo/curobo # currently rl_for_curobo is a legacy name for our mpc-multi arm project (sorry for the inconvenience, this will be changed soon to "mpc-multi-arm" or similar in[...]
         - install curobo in your conda env: 
          - pip install -e . --no-build-isolation
           - if fails, try: SETUPTOOLS_SCM_PRETEND_VERSION_FOR_NVIDIA_CUROBO=0.0.0+local pip install -e . --no-build-isolation  
@@ -504,8 +516,8 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the [...]
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http:/[...]"
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
 
