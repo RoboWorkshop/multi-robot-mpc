@@ -69,7 +69,7 @@
 
               <div class="eql-cntrb"><small><br><sup>1</sup>Foundations of AI Institute, Stein Faculty of Computer and Information Science, Ben-Gurion University of the Negev.</small></div>
 
-              <div class="eql-cntrb"><small><br>This research was supported by Ben-Gurion University of the Negev through the Agricultural, Biological and Cognitive Robotics Initiative, the Marcus Endowment Fund and the Helmsley Charitable Trust.</small></div>
+              <div class="eql-cntrb"><small><br>This research was supported by Ben-Gurion University of the Negev through the Agricultural, Biological and Cognitive Robotics Initiative, the Marcus End[...]
 
               <div class="eql-cntrb"><small><br>Emails: {evrond,eliasgol,danrouve}@post.bgu.ac.il, brafman@bgu.ac.il</small></div>
 
@@ -258,7 +258,7 @@
             <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
              <!-- <iframe src="https://youtu.be/embed/9mo3UCUW2Qk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
           <!-- <iframe width="560" height="315" src="https://youtu.be/txZJe9PxYc4?si=1NDo2Uw10_GukLAe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write[...]
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/txZJe9PxYc4?si=1NDo2Uw10_GukLAe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboa[...] 
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/txZJe9PxYc4?si=1NDo2Uw10_GukLAe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboa[...][...]
           </div>
         </div>
       </div>
@@ -291,51 +291,52 @@
 
       <!-- Video 1 -->
       <div class="column is-half">
-        <video autoplay muted loop playsinline controls style="width:100%; height:auto;">
-          <source src="static/videos/Bin_Level5_Seed1_SD.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p class="has-text-centered">STORM Decentralized</p>
+        <div style="display: flex; flex-direction: column; height: 100%;">
+          <video autoplay muted loop playsinline controls style="width:100%; height:auto; flex-grow: 1;">
+            <source src="static/videos/Bin_Level5_Seed1_SD.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="has-text-centered" style="margin-top: 0.75rem; margin-bottom: 0;">STORM Decentralized</p>
+        </div>
       </div>
 
       <!-- Video 2 -->
       <div class="column is-half">
-        <video autoplay muted loop playsinline controls style="width:100%; height:auto;">
-          <source src="static/videos/Bin_Level5_Seed1_CC.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p class="has-text-centered">CuRobo</p>
+        <div style="display: flex; flex-direction: column; height: 100%;">
+          <video autoplay muted loop playsinline controls style="width:100%; height:auto; flex-grow: 1;">
+            <source src="static/videos/Bin_Level5_Seed1_CC.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="has-text-centered" style="margin-top: 0.75rem; margin-bottom: 0;">CuRobo</p>
+        </div>
       </div>
 
       <!-- Video 3 -->
       <div class="column is-half">
-        <video autoplay muted loop playsinline controls style="width:100%; height:auto;">
-          <source src="static/videos/Bin_Level5_Seed1_O-.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p class="has-text-centered">MR STORM no prioritization (tau=0)</p>
+        <div style="display: flex; flex-direction: column; height: 100%;">
+          <video autoplay muted loop playsinline controls style="width:100%; height:auto; flex-grow: 1;">
+            <source src="static/videos/Bin_Level5_Seed1_O-.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="has-text-centered" style="margin-top: 0.75rem; margin-bottom: 0;">MR STORM no prioritization (tau=0)</p>
+        </div>
       </div>
 
       <!-- Your Algorithm (highlighted) -->
       <div class="column is-half has-background-light">
-        <video autoplay muted loop playsinline controls
-          style="width:100%; height:auto; border: 3px solid #3273dc; border-radius: 8px;">
-          <source src="static/videos/Bin_Level5_Seed2_O.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p class="has-text-centered has-text-weight-bold">⭐ MR STORM</p>
+        <div style="display: flex; flex-direction: column; height: 100%; padding: 1rem; border: 3px solid #3273dc; border-radius: 8px;">
+          <video autoplay muted loop playsinline controls style="width:100%; height:auto; flex-grow: 1;">
+            <source src="static/videos/Bin_Level5_Seed2_O.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="has-text-centered has-text-weight-bold" style="margin-top: 0.75rem; margin-bottom: 0;">⭐ MR STORM</p>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
   
-
-
-
-
-
-
 <!-- Image carousel -->
 <!-- <section class="hero is-small">
   <div class="hero-body">
@@ -420,9 +421,6 @@
 
 
 
-
-
-
 <!-- Paper poster -->
 <!-- <section class="hero is-small is-light">
   <div class="hero-body">
@@ -471,7 +469,7 @@
         pick a name for your environment (%env%)
         
         - create a new env using: 'conda create env -b %env%'  (and then 'conda activate %env%') # make sure python is  3.10 or 3.11 depending on the mentioned above!
-        - then install isaac sim using “pip” installation instructions the isaac sim env inside the conda env https://docs.isaacsim.omniverse.nvidia.com/latest/installation/install_python.htm[...]
+        - then install isaac sim using "pip" installation instructions the isaac sim env inside the conda env https://docs.isaacsim.omniverse.nvidia.com/latest/installation/install_python.htm[...]
          (pip is the way worked best to me and the rest of process follows, but any other isaac sim installation should work,
           look for the instructions start with: conda create -n env_isaacsim python=3.11 # use %env%  conda activate env_isaacsim # use %env% and keep from there with their tutoial)
         
@@ -516,8 +514,8 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the [...]
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http:/[...]"
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the [...]
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http:/[...][...]
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
 
