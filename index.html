@@ -2,29 +2,24 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <!-- Meta tags for social media banners and academic indexing -->
+  <meta name="description" content="MR-STORM: Scalable Multi-Arm Control By Distributed MPC (IEEE/RSJ IROS 2026). Decentralized GPU MPPI framework for real-time multi-arm manipulation in Isaac Sim, Gazebo, ROS 2, and physical robots.">
+  <meta property="og:title" content="MR-STORM: Scalable Multi-Arm Control By Distributed MPC (IROS 2026)"/>
+  <meta property="og:description" content="Distributed sampling-based MPC framework leveraging massively parallel GPU sampling, horizon plan-sharing, and dynamic priority conflict resolution for multi-arm manipulation."/>
+  <meta property="og:url" content="https://roboworkshop.github.io/multi-robot-mpc/"/>
+  <meta property="og:image" content="https://github.com/user-attachments/assets/296e01e6-7869-45dd-bd94-4688dae235bc" />
+  <meta property="og:image:width" content="1351"/>
+  <meta property="og:image:height" content="334"/>
 
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:title" content="MR-STORM: Scalable Multi-Arm Control By Distributed MPC (IROS 2026)">
+  <meta name="twitter:description" content="Decentralized GPU MPPI for scalable multi-arm manipulation across Isaac Sim, Gazebo, ROS 2, and real robots.">
+  <meta name="twitter:image" content="https://github.com/user-attachments/assets/296e01e6-7869-45dd-bd94-4688dae235bc">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="MR-STORM, Multi-Arm Manipulation, Model Predictive Control, MPPI, STORM, CuRobo, Distributed Robotics, Collision Avoidance, ROS 2, Gazebo, Isaac Sim, IROS 2026">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Multi Robot MPC</title>
+  <title>MR-STORM: Scalable Multi-Arm Control By Distributed MPC (IROS 2026)</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -76,7 +71,7 @@
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block">To appear in: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
+              <span class="author-block">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
             </div>
 
                   <div class="column has-text-centered">
@@ -116,12 +111,23 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2602.10114" target="_blank"
+                  <a href="https://arxiv.org/abs/2602.10114" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
+                </a>
+              </span>
+
+                <!-- BibTeX Anchor Link -->
+                <span class="link-block">
+                  <a href="#BibTeX"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-quote-right"></i>
+                  </span>
+                  <span>BibTeX</span>
                 </a>
               </span>
             </div>
@@ -207,12 +213,6 @@
         <div class="item item-video4">
           <video poster="" id="video4" autoplay controls muted loop height="100%">
             <source src="static/videos/video_1_part3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3b">
-          <video poster="" id="video3b" autoplay controls muted loop height="100%">
-            <source src="static/videos/g1_video2_part2.mp4"
             type="video/mp4">
           </video>
         </div>
@@ -431,75 +431,109 @@
 <!--End paper poster -->
 
 
-<!--BibTex citation -->
-  <!-- <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre>
-        <code>@misc{evron2026decoupledmppibasedmultiarmmotion,
-      title={Decoupled MPPI-Based Multi-Arm Motion Planning}, 
-      author={Dan Evron and Elias Goldsztejn and Ronen I. Brafman},
-      year={2026},
-      eprint={2602.10114},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2602.10114}, 
-}</code>
-      </pre>
-    </div>
-</section> -->
-<!--End BibTex citation -->
-
-<!--Code instructions --> 
+<!-- Installation & Multi-Simulator / Hardware Quickstart -->
 <section class="section" id="Installation">
-    <div class="container is-max-desktop content">
-      <h2 class="title">Installation</h2>
-      <pre><code>
-        #REQUIREMENTS: ubuntu >= 20.04, git and gitlfs (see curobo docs to see why they are needed but don't install them from there but from the repo readme instructions (in code repo or from th[...]
-        (It's recommended to install the packages will now described inside a conda environment. We also installed isaac sim in that conda env. Supported Isaac sim versions are 4.5 and 5.0. 
-        Before running conda  create please checkout https://docs.isaacsim.omniverse.nvidia.com/5.0.0/installation/install_python.html and https://docs.isaacsim.omniverse.nvidia.com/4.5.0/install[...]
-        Then take isaac sim conda installation instructions (isaac sim 4.5 with python 3.10 and ldd 2.34+ or 5.0 with python 3.11 and ldd 2.35+ depending on your machine and follow the instructio[...]
-        Note that you can install isaac sim differently if you want for some reason (docker, from source etc) but make sure you install all packages similarly to the instructions will now describ[...]
-        
-        pick a name for your environment (%env%)
-        
-        - create a new env using: 'conda create env -b %env%'  (and then 'conda activate %env%') # make sure python is  3.10 or 3.11 depending on the mentioned above!
-        - then install isaac sim using "pip" installation instructions the isaac sim env inside the conda env https://docs.isaacsim.omniverse.nvidia.com/latest/installation/install_python.htm[...]
-         (pip is the way worked best to me and the rest of process follows, but any other isaac sim installation should work,
-          look for the instructions start with: conda create -n env_isaacsim python=3.11 # use %env%  conda activate env_isaacsim # use %env% and keep from there with their tutoial)
-        
-        - If installing isaac sim 4.5 (python 3.10), run: 
-          conda activate %env%
-          pip install isaacsim[all]==4.5.0 --extra-index-url https://pypi.nvidia.com
-          pip install isaacsim[extscache]==4.5.0 --extra-index-url https://pypi.nvidia.com
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3 has-text-centered">Installation &amp; Multi-Platform Quickstart</h2>
+    <p class="has-text-centered">
+      MR-STORM provides a simulator- and hardware-agnostic <code>mr_storm</code> Python &amp; ROS 2 package.
+      Run in <strong>NVIDIA Isaac Sim</strong>, <strong>Gazebo</strong>, <strong>MuJoCo / PyBullet</strong>,
+      <strong>Distributed ROS 2</strong>, or directly on <strong>physical robot hardware</strong>.
+    </p>
 
-          
-        - If installing isaac sim 5.0 (python 3.11), run:   
-          conda activate %env%
-          pip install isaacsim[all,extscache]==5.0.0 --extra-index-url https://pypi.nvidia.com
-        
+    <h4 class="title is-5">1. Base Environment &amp; CuRobo Installation</h4>
+    <pre><code># Create Conda environment (Python 3.10 for Isaac Sim 4.5 / ROS 2 Humble, or Python 3.11 for Isaac Sim 5.0)
+conda create -n mr_storm python=3.10 -y
+conda activate mr_storm
 
-        
-        - clone our repo: Git clone https://github.com/RoboWorkshop/rl_for_curobo.git
-        - cd rl_for_curobo/curobo # currently rl_for_curobo is a legacy name for our mpc-multi arm project (sorry for the inconvenience, this will be changed soon to "mpc-multi-arm" or similar in[...]
-        - install curobo in your conda env: 
-         - pip install -e . --no-build-isolation
-          - if fails, try: SETUPTOOLS_SCM_PRETEND_VERSION_FOR_NVIDIA_CUROBO=0.0.0+local pip install -e . --no-build-isolation  
-         # more instructions and examples here: https://curobo.org/get_started/1_install_instructions.html  
-         # note that you don't need to clone the repository like they require, because we already have it in our repository (don't do that: git clone https://github.com/NVlabs/curobo.git)
-      
-        - cd .. # back to rl_for_curobo
-        pip install . # install rl_for_curobo module in yourconda env
-        # should see some log and then at the end "Successfully installed rl_for_curobo-0.1.0"
-        - git lfs install # if not yet done
-        - git lfs pull # very important so that all big files like robots meshes will be pulled properly 
-        - run hello world example # todo
-        
-        
-    
-      </code></pre>
+# Clone repository &amp; pull LFS robot meshes
+git clone https://github.com/RoboWorkshop/rl_for_curobo.git
+cd rl_for_curobo
+git lfs install &amp;&amp; git lfs pull
+
+# Install bundled CuRobo (with MR-STORM GPU DynamicObsCost rollout kernels) + mr_storm package
+cd curobo
+SETUPTOOLS_SCM_PRETEND_VERSION_FOR_NVIDIA_CUROBO=0.0.0+local pip install -e . --no-build-isolation
+cd ..
+pip install -e .</code></pre>
+
+    <div class="columns is-multiline mt-4">
+      <div class="column is-half">
+        <div class="box" style="height: 100%;">
+          <h4 class="title is-5"><i class="fas fa-cubes mr-2"></i>Gazebo &amp; Custom Simulators</h4>
+          <p>Connect directly to <strong>Gazebo</strong> (Harmonic / Ignition / Classic) via <code>ros2_control</code> or plug into MuJoCo/PyBullet:</p>
+          <pre><code># Auto-generate Gazebo ros2_control YAML:
+python3 examples/01_gazebo_multi_arm.py \
+  --print_ros2_control_yaml &gt; controllers.yaml
+
+# Run MR-STORM with Gazebo:
+python3 examples/01_gazebo_multi_arm.py \
+  --fleet_config mr_storm/ros2/config/quad_ur5e_fleet.yaml</code></pre>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="box" style="height: 100%;">
+          <h4 class="title is-5"><i class="fas fa-network-wired mr-2"></i>Distributed Multi-Arm ROS 2</h4>
+          <p>Run each arm as an independent decentralized ROS 2 node (on one or multiple PCs/GPUs) sharing horizon plans over <code>/mr_storm/plan_broadcast</code>:</p>
+          <pre><code># Launch 4 distributed MR-STORM arm nodes:
+ros2 launch mr_storm/ros2/launch/distributed_multi_arm.launch.py \
+  num_arms:=4
+
+# Send crossing 6-DoF goals &amp; monitor bus:
+python3 examples/03_distributed_ros2_goal_sender.py</code></pre>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="box" style="height: 100%;">
+          <h4 class="title is-5"><i class="fas fa-robot mr-2"></i>Real Robot Hardware</h4>
+          <p>Built-in real-time <code>SafetySupervisor</code> (step clamping, velocity limits, EMA smoothing, E-Stop), UR RTDE driver, and a 5-line callback wrapper for any robot SDK (Unitree G1, Franka, Kinova):</p>
+          <pre><code># Universal Robots (UR5e/UR10e via ur_rtde):
+python3 examples/02_real_robot_multi_arm.py \
+  --mode ur_rtde \
+  --arm0_ip 192.168.1.101 --arm1_ip 192.168.1.102</code></pre>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="box" style="height: 100%;">
+          <h4 class="title is-5"><i class="fas fa-microchip mr-2"></i>NVIDIA Isaac Sim Benchmarks</h4>
+          <p>Reproduce all IROS 2026 paper benchmarks (MR-STORM <code>O</code>, <code>O-</code>, STORM Decentralized <code>SD</code>, Centralized <code>SC</code>, CuRobo <code>CC</code>, dRRT* <code>D</code>):</p>
+          <pre><code># Optional: Install Isaac Sim 4.5 or 5.0 via pip
+pip install isaacsim[all,extscache]==4.5.0 \
+  --extra-index-url https://pypi.nvidia.com
+
+# Run benchmark suite:
+python3 projects_root/experiments/core_api/dataset_collector.py</code></pre>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
+
+<!-- BibTeX citation -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+      <h2 class="title" style="margin-bottom: 0;">BibTeX</h2>
+      <button class="button is-small is-dark is-rounded" onclick="navigator.clipboard.writeText(document.getElementById('bibtex-code').innerText).then(() => { this.innerText = 'Copied!'; setTimeout(() => { this.innerText = 'Copy BibTeX'; }, 2000); });">
+        Copy BibTeX
+      </button>
+    </div>
+    <pre><code id="bibtex-code">@inproceedings{evron2026mrstorm,
+  title     = {MR-STORM: Scalable Multi-Arm Control By Distributed MPC},
+  author    = {Evron, Dan and Goldsztejn, Elias and Suissa, Dan R. and Brafman, Ronen I.},
+  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year      = {2026},
+  eprint    = {2602.10114},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url       = {https://arxiv.org/abs/2602.10114}
+}</code></pre>
+  </div>
+</section>
+<!-- End BibTeX citation -->
 
 
   <footer class="footer">
